@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS prices (
+  resource TEXT PRIMARY KEY,
+  price DECIMAL(10,4) NOT NULL DEFAULT 0,
+  amount INTEGER NOT NULL CHECK(amount > 0)
+);
+
+INSERT INTO prices VALUES ('алмаз', 3000, 64); -- Цена за стак
+INSERT INTO prices VALUES ('золотой слиток', 700, 9); -- Цена за блок
+INSERT INTO prices VALUES ('угольная пыль', 0.15, 1); -- Цена за штуку
